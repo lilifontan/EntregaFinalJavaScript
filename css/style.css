@@ -1,0 +1,479 @@
+@charset "UTF-8";
+header {
+  background-color: black;
+  grid-area: header;
+  display: flex;
+  justify-content: space-evenly; }
+  header ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-top: 1.2rem; }
+    header ul li a {
+      color: #ffcaaf;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-family: cursive;
+      padding: 1.5rem; }
+
+ul li a:hover {
+  color: #caa3ec; }
+
+/*.headerHome {
+  background-image: url(../Imagenes/slider1.png);
+  width: 100%;
+  height: 55vh;
+  grid-area: headerHome;
+}*/
+footer {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: black;
+  grid-area: pie; }
+  footer ul {
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    list-style: none;
+    margin-right: 5rem;
+    margin-left: 5rem; }
+    footer ul li a {
+      color: #ffcaaf;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-family: cursive; }
+
+ul li a:hover {
+  color: #caa3ec; }
+
+/*clase agregada para armado de grid Home*/
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 8, 1fr;
+  grid-template-areas: "header header header header" "contenedor_carousel contenedor_carousel contenedor_carousel contenedor_carousel" "destacados destacados destacados destacados" "verDestacados verDestacados verDestacados verDestacados" "lili lili lili lili" "verCarrito verCarrito verCarrito verCarrito" "lolo lolo lolo lolo" "pie pie pie pie"; }
+
+/*clase agregada para armado de grid Productos*/
+.contenedor-productos {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 5, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "card1 card2 card3 card4" "card5 card6 card7 card8" "pie pie pie pie"; }
+
+/*clase agregada para armado de grid Novedades*/
+.contenedor-novedades {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 4, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "sectionText sectionText sectionText sectionText" "pie pie pie pie"; }
+
+/*clase agregada para armado de grid Sobre mí*/
+.contenedor-sobreMi {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 5, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "imagen imagen imagen imagen" "sectionText sectionText sectionText sectionText" "pie pie pie pie"; }
+
+.contenedor-carrito {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 4, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "lolo lolo lolo lolo" "pie pie pie pie"; }
+
+/*clase agregada para armado de grid Form de Contacto*/
+.contenedor-form {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 5, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "formulario formulario formulario formulario" "sectionForm sectionForm sectionForm sectionForm" "pie pie pie pie"; }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 15%;
+  padding-left: 4%;
+  color: #080000; }
+  form .btn {
+    margin: 2rem auto;
+    background-color: #72285c;
+    border: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: large; }
+  form input,
+  form textarea {
+    background-color: white(238, 238, 245, 0.432);
+    color: #1a1616; }
+  form .nombre, form .email, form .telefono, form .mensaje, form label {
+    font-size: larger; }
+  form label {
+    margin-top: 0.5rem;
+    font-size: 1.3rem; }
+
+.formulario {
+  grid-area: formulario;
+  width: 100%; }
+
+.card {
+  padding: 3%;
+  margin-bottom: 50px; }
+
+.buttonCTA, .buttonProd, .buttonDelete, .buttonReserva {
+  background-color: #e0dbdb;
+  color: #302d2d;
+  margin-bottom: 1%;
+  margin-top: 5%;
+  font-size: 22px;
+  font-weight: 500;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.buttonCarrito {
+  background-color: #f4ecec;
+  color: #302d2d;
+  margin-bottom: 1%;
+  font-size: 35px;
+  font-weight: 500;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.buttonProd {
+  padding: none;
+  font-size: 18px;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+
+.buttonDelete {
+  padding: none;
+  font-size: 18px;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+
+.imagen {
+  grid-area: imagen;
+  max-width: 100%;
+  height: auto; }
+
+.cartImg {
+  width: 20%; }
+
+.cartPrice {
+  display: block;
+  font-size: 1000px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.card_gen, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8 {
+  padding: 12%;
+  width: 100%; }
+  .card_gen img, .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img, .card7 img, .card8 img {
+    width: 100%; }
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+.card1 {
+  grid-area: card1; }
+
+.card2 {
+  grid-area: card2; }
+
+.card3 {
+  grid-area: card3; }
+
+.card4 {
+  grid-area: card4; }
+
+.card5 {
+  grid-area: card5; }
+
+.card6 {
+  grid-area: card6; }
+
+.card7 {
+  grid-area: card7; }
+
+.card8 {
+  grid-area: card8; }
+
+.scale:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 1s ease; }
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat 2, 1fr;
+    grid-template-rows: 8, 1fr;
+    grid-template-areas: "header header" "contenedor_carousel contenedor_carousel" "destacados destacados" "verDestacados verDestacados" "lili lili" "lili lili" "verCarrito verCarrito" "lolo lolo" "pie pie"; }
+  .contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat 2, 1fr;
+    grid-template-rows: 8, 1fr;
+    grid-template-areas: "header header" "contenedor_carousel contenedor_carousel" "destacados destacados" "verDestacados verDestacados" "card1 card2" "card3 card4" "card5 card6" "card7 card8" "pie pie"; }
+  /*clase agregada para armado de grid Sobre mí*/
+  .contenedor-sobreMi {
+    display: grid;
+    background-color: #e0d2d4;
+    grid-template-columns: repeat 4, 1fr;
+    grid-template-rows: 5, 1fr;
+    grid-template-areas: "header header" "destacados destacados" "imagen imagen" "sectionText sectionText" "pie pie"; }
+  /*clase agregada para armado de grid Form de Contacto*/
+  .contenedor-form {
+    display: grid;
+    background-color: #e0d2d4;
+    grid-template-columns: repeat 2, 1fr;
+    grid-template-rows: 5, 1fr;
+    grid-template-areas: "header header" "destacados destacados" "formulario formulario" "sectionForm sectionForm" "pie pie"; } }
+
+.contenedor-carrito {
+  display: grid;
+  background-color: #e0d2d4;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: 5, 1fr;
+  grid-template-areas: "header header " "destacados destacados" "lolo lolo" "pie pie"; }
+
+@media screen and (max-width: 414px) {
+  .contenedor {
+    grid-template-columns: repeat 1fr;
+    grid-template-rows: 11, 1fr;
+    grid-template-areas: "header" "contenedor_carousel" "destacados" "verDestacados" "lili" "lili" "lili" "lili" "verCarrito" "lolo" "pie"; }
+  .contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat 1fr;
+    grid-template-rows: 12, 1fr;
+    grid-template-areas: "header" "contenedor_carousel" "destacados" "card1" "card2" "card3" "card4" "card5" "card6" "card7" "card8" "pie"; }
+  /*clase agregada para armado de grid Form de Contacto*/
+  .contenedor-form {
+    display: grid;
+    background-color: #e0d2d4;
+    grid-template-columns: repeat 1fr;
+    grid-template-rows: 5, 1fr;
+    grid-template-areas: "header " "destacados" "formulario" "sectionForm" "pie"; }
+  .contenedor-carrito {
+    display: grid;
+    background-color: #e0d2d4;
+    grid-template-columns: repeat 4, 1fr;
+    grid-template-rows: 5, 1fr;
+    grid-template-areas: "header" "destacados" "lolo" "pie"; }
+  header {
+    background-color: black;
+    grid-area: header;
+    display: flex; }
+    header ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 5%; }
+      header ul li a {
+        color: #ffcaaf;
+        flex-direction: column;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-family: cursive;
+        padding: 0.5rem; }
+    header ul li a:hover {
+      color: #caa3ec; }
+  footer {
+    background-color: black;
+    grid-area: pie;
+    display: flex; }
+    footer ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem; }
+      footer ul li a {
+        color: #ffcaaf;
+        font-size: 1.1rem;
+        font-family: cursive;
+        flex-direction: column; }
+  ul li a:hover {
+    color: #caa3ec; } }
+
+.titulo {
+  grid-area: titulo;
+  width: 100%; }
+
+h1 {
+  text-align: center;
+  padding-top: 3%; }
+
+h2 {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: x-large; }
+
+.destacados {
+  display: flex;
+  grid-area: destacados;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 3%; }
+
+.sectionText {
+  text-align: justify;
+  padding: 4%;
+  width: 100%;
+  font-size: x-large;
+  grid-area: sectionText; }
+
+.sectionForm {
+  grid-area: sectionForm;
+  text-align: justify;
+  padding: 4%;
+  width: 100%;
+  font-size: x-large; }
+
+.info {
+  text-align: justify;
+  padding: 10%;
+  font-size: x-large; }
+
+.contenedor_carousel {
+  grid-area: contenedor_carousel; }
+
+.cardContainer {
+  display: flex;
+  grid-area: lili;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%; }
+
+.cartContainer {
+  display: flex;
+  grid-area: lolo;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%; }
+
+.verDestacados {
+  display: flex;
+  justify-content: center;
+  grid-area: verDestacados; }
+
+.verCarrito {
+  display: flex;
+  justify-content: center;
+  grid-area: verCarrito; }
+
+.card {
+  padding: 3%;
+  margin-bottom: 50px; }
+
+.buttonCTA, .buttonProd, .buttonDelete, .buttonReserva {
+  background-color: #e0dbdb;
+  color: #302d2d;
+  margin-bottom: 1%;
+  margin-top: 5%;
+  font-size: 22px;
+  font-weight: 500;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.buttonCarrito {
+  background-color: #f4ecec;
+  color: #302d2d;
+  margin-bottom: 1%;
+  font-size: 35px;
+  font-weight: 500;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.buttonProd {
+  padding: none;
+  font-size: 18px;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+
+.buttonDelete {
+  padding: none;
+  font-size: 18px;
+  padding-top: 1%;
+  padding-bottom: 1%; }
+
+.imagen {
+  grid-area: imagen;
+  max-width: 100%;
+  height: auto; }
+
+.cartImg {
+  width: 20%; }
+
+.cartPrice {
+  display: block;
+  font-size: 1000px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.card_gen, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8 {
+  padding: 12%;
+  width: 100%; }
+  .card_gen img, .card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img, .card7 img, .card8 img {
+    width: 100%; }
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+.card1 {
+  grid-area: card1; }
+
+.card2 {
+  grid-area: card2; }
+
+.card3 {
+  grid-area: card3; }
+
+.card4 {
+  grid-area: card4; }
+
+.card5 {
+  grid-area: card5; }
+
+.card6 {
+  grid-area: card6; }
+
+.card7 {
+  grid-area: card7; }
+
+.card8 {
+  grid-area: card8; }
+
+.scale:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 1s ease; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }

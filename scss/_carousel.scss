@@ -1,0 +1,33 @@
+.contenedor_carousel {
+grid-area: contenedor_carousel;
+}
+.cardContainer {
+    display: flex;
+    grid-area: lili;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+ .cartContainer
+ {
+  display: flex;
+  grid-area: lolo;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+  .verDestacados {
+    display: flex;
+    justify-content: center;
+    grid-area: verDestacados;
+  }
+
+  .verCarrito{
+    display: flex;
+    justify-content:center;
+    grid-area: verCarrito;
+  }
+
+  

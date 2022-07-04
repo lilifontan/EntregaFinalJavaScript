@@ -1,0 +1,8 @@
+
+
+[
+{"id": "001", "nombre": "Ethereal", "imgSrc": "/Imagenes/Ring_resized.jpg", "precio": 12500, "cantidad" : 0},
+{"id": "002", "nombre": "Avar", "imgSrc": "./Imagenes/Earrings_resized.jpeg", "precio": 15900, "cantidad" : 0},
+{"id": "003", "nombre": "Cyon", "imgSrc": "./Imagenes/Necklace_resized.jpeg", "precio": 16500, "cantidad" : 0},
+{"id": "004", "nombre": "Balter", "imgSrc": "./Imagenes/Ring_resized.jpg", "precio": 24500, "cantidad" : 0}
+]

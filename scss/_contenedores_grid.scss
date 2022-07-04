@@ -1,0 +1,86 @@
+@import "variables";
+  
+  /*clase agregada para armado de grid Home*/
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (8, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "contenedor_carousel contenedor_carousel contenedor_carousel contenedor_carousel"
+      "destacados destacados destacados destacados"
+      "verDestacados verDestacados verDestacados verDestacados"
+      "lili lili lili lili"
+      "verCarrito verCarrito verCarrito verCarrito"
+      "lolo lolo lolo lolo"
+      "pie pie pie pie";
+  }
+  
+  /*clase agregada para armado de grid Productos*/
+  .contenedor-productos {
+    display: grid;
+    @include backgrounds($color4);
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (5, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "destacados destacados destacados destacados"
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8"
+      "pie pie pie pie";
+  }
+  
+  /*clase agregada para armado de grid Novedades*/
+  .contenedor-novedades {
+    display: grid;
+    @include backgrounds($color4);
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (4, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "destacados destacados destacados destacados"
+      "sectionText sectionText sectionText sectionText"
+      "pie pie pie pie";
+  }
+    /*clase agregada para armado de grid Sobre mí*/
+    .contenedor-sobreMi {
+      display: grid;
+      @include backgrounds($color4);
+      grid-template-columns: repeat (4, 1fr);
+      grid-template-rows: (5, 1fr);
+      grid-template-areas:
+        "header header header header"
+        "destacados destacados destacados destacados"
+        "imagen imagen imagen imagen"
+        "sectionText sectionText sectionText sectionText"
+        "pie pie pie pie";
+    }
+    
+    .contenedor-carrito {
+      display: grid;
+      @include backgrounds($color4);
+      grid-template-columns: repeat (4, 1fr);
+      grid-template-rows: (4, 1fr);
+      grid-template-areas:
+        "header header header header"
+        "destacados destacados destacados destacados"
+        "lolo lolo lolo lolo"
+        "pie pie pie pie";
+    }
+
+  /*clase agregada para armado de grid Form de Contacto*/
+  .contenedor-form {
+    display: grid;
+    @include backgrounds($color4);
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (5, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "destacados destacados destacados destacados"
+      "formulario formulario formulario formulario"
+      "sectionForm sectionForm sectionForm sectionForm"
+      "pie pie pie pie";
+
+  }
+
+ 

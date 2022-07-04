@@ -1,0 +1,183 @@
+@media screen and (max-width: 768px) {
+    .contenedor {
+      grid-template-columns: repeat (2, 1fr);
+      grid-template-rows: (8, 1fr);
+      grid-template-areas:
+        "header header"
+        "contenedor_carousel contenedor_carousel"
+        "destacados destacados"
+        "verDestacados verDestacados"
+        "lili lili"
+        "lili lili"
+        "verCarrito verCarrito"
+        "lolo lolo"
+        "pie pie";
+    }
+    .contenedor-productos {
+      display: grid;
+      grid-template-columns: repeat (2, 1fr);
+      grid-template-rows: (8, 1fr);
+      grid-template-areas:
+        "header header"
+        "contenedor_carousel contenedor_carousel"
+        "destacados destacados"
+        "verDestacados verDestacados"
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8"
+        "pie pie";
+    }
+
+  /*clase agregada para armado de grid Sobre mí*/
+  .contenedor-sobreMi {
+    display: grid;
+    @include backgrounds($color4);
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (5, 1fr);
+    grid-template-areas:
+      "header header"
+      "destacados destacados"
+      "imagen imagen"
+      "sectionText sectionText"
+      "pie pie";
+  }
+
+/*clase agregada para armado de grid Form de Contacto*/
+.contenedor-form {
+  display: grid;
+  @include backgrounds($color4);
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: (5, 1fr);
+  grid-template-areas:
+    "header header"
+    "destacados destacados"
+    "formulario formulario"
+    "sectionForm sectionForm"
+    "pie pie";
+}
+  }
+
+  .contenedor-carrito {
+    display: grid;
+    @include backgrounds($color4);
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: (5, 1fr);
+    grid-template-areas:
+      "header header "
+      "destacados destacados"
+      "lolo lolo"
+      "pie pie";
+  }
+
+  @media screen and (max-width: 414px) {
+    .contenedor {
+      grid-template-columns: repeat (1fr);
+      grid-template-rows: (11, 1fr);
+      grid-template-areas:
+        "header"
+        "contenedor_carousel"
+        "destacados"
+        "verDestacados"
+        "lili"
+        "lili"
+        "lili"
+        "lili"
+        "verCarrito"
+        "lolo"
+        "pie";
+    }
+  
+    .contenedor-productos {
+      display: grid;
+      grid-template-columns: repeat (1fr);
+      grid-template-rows: (12, 1fr);
+      grid-template-areas:
+        "header"
+        "contenedor_carousel"
+        "destacados"
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8"
+        "pie";
+    }
+    /*clase agregada para armado de grid Form de Contacto*/
+.contenedor-form {
+  display: grid;
+  @include backgrounds($color4);
+  grid-template-columns: repeat (1fr);
+  grid-template-rows: (5, 1fr);
+  grid-template-areas:
+    "header "
+    "destacados"
+    "formulario"
+    "sectionForm"
+    "pie";
+}
+
+.contenedor-carrito {
+  display: grid;
+  @include backgrounds($color4);
+  grid-template-columns: repeat (4, 1fr);
+  grid-template-rows: (5, 1fr);
+  grid-template-areas:
+    "header"
+    "destacados"
+    "lolo"
+    "pie";
+}
+
+header {
+  background-color: $bg_color;
+  grid-area: header;
+  display: flex;
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 5%;
+
+      li a {
+        color: #ffcaaf;
+        flex-direction: column;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-family: cursive;
+        padding:0.5rem;
+      }
+    }
+    ul li a:hover  {
+      color: rgb(202, 163, 236);
+    }
+}
+
+footer {
+  background-color: $bg_color;
+  grid-area: pie;
+  display: flex;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    li {
+      a {
+        color: #ffcaaf;
+        font-size: 1.1rem;
+        font-family: cursive;
+        flex-direction: column;
+      }
+    }
+  }
+}
+ul li a:hover  {
+  color: rgb(202, 163, 236);
+ }
+  }
+

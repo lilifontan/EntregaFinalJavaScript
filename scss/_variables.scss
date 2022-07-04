@@ -1,0 +1,14 @@
+$bg_color: black;
+$bg-color2: rgba(0, 0, 0, 0.39);
+$height_1: 12vh;
+$f_size: 1.1rem;
+$color1:#f7d8c8;
+$color2:#f7c0be;
+$color3:#c5c3da;
+$color4:#e0d2d4;
+
+@mixin backgrounds($colors){
+    background-color: $colors;
+  }
+
+  

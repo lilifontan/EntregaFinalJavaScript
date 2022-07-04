@@ -1,0 +1,469 @@
+@charset "UTF-8";
+header {
+  background-color: black;
+  height: 14vh;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+}
+
+header navbar {
+  background-color: rgba(0, 0, 0, 0.39);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: navbar;
+}
+
+header navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8rem;
+  margin-right: 5rem;
+}
+
+header navbar ul li a {
+  color: #ffcaaf;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: cursive;
+}
+
+header navbar ul li a hover {
+  color: #caa3ec;
+}
+
+.headerHome {
+  background-image: url(../Imagenes/slider1.png);
+  width: 100%;
+  height: 55vh;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: headerHome;
+}
+
+.headerHome navbar {
+  background-color: rgba(0, 0, 0, 0.39);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: navbar;
+}
+
+.headerHome navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.headerHome navbar ul li a {
+  color: #ffcaaf;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.headerHome navbar ul li a hover {
+  color: #caa3ec;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 3.6rem;
+  background-color: black;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: pie;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+footer ul li a {
+  color: #ffcaaf;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*clase agregada para armado de grid Home*/
+.contenedor {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f7d8c8;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+  -ms-grid-rows: 4, 1fr;
+      grid-template-rows: 4, 1fr;
+      grid-template-areas: "headerHome headerHome headerHome headerHome" "destacados destacados destacados destacados" "card1 card2 card3 card4" "pie pie pie pie";
+}
+
+/*clase agregada para armado de grid Productos*/
+.contenedor-productos {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f7c0be;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+  -ms-grid-rows: 5, 1fr;
+      grid-template-rows: 5, 1fr;
+      grid-template-areas: "header header header header" "destacados destacados destacados destacados" "container container container container" "card1 card2 card3 card4" "pie pie pie pie";
+}
+
+/*clase agregada para armado de grid Sobre mí*/
+.contenedor-sobreMi,
+.contenedor-novedades {
+  display: -ms-grid;
+  display: grid;
+  background-color: #c5c3da;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+  -ms-grid-rows: 4, 1fr;
+      grid-template-rows: 4, 1fr;
+      grid-template-areas: "header header header header" "destacados destacados destacados destacados" "sectionText sectionText sectionText sectionText" "pie pie pie pie";
+}
+
+/*clase agregada para armado de grid Form de Contacto*/
+.contenedor-form {
+  display: -ms-grid;
+  display: grid;
+  background-color: #e0d2d4;
+  -ms-grid-columns: repeat 4, 1fr;
+      grid-template-columns: repeat 4, 1fr;
+  -ms-grid-rows: 4, 1fr;
+      grid-template-rows: 4, 1fr;
+      grid-template-areas: "header header header header" "destacados destacados destacados destacados" "formulario formulario formulario formulario" "pie pie pie pie";
+}
+
+.titulo {
+  grid-area: titulo;
+  width: 100%;
+}
+
+.sectionText {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: sectionText;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 3%;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.navbar ul li a {
+  color: #ffcaaf;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.navbar ul li a:hover {
+  color: #caa3ec;
+}
+
+.section-productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffcaaf;
+}
+
+.destacados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: destacados;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.textos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.card, .card1, .card2, .card3, .card4 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.card1 {
+  padding-right: 2rem;
+  padding-left: 5rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: card1;
+}
+
+.card1 img {
+  width: 100%;
+}
+
+.card2 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: card2;
+}
+
+.card2 img {
+  width: 100%;
+}
+
+.card3 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: card3;
+}
+
+.card3 img {
+  width: 100%;
+}
+
+.card4 {
+  padding-right: 5rem;
+  padding-left: 2rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: card4;
+}
+
+.card4 img {
+  width: 100%;
+}
+
+.scale:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/*.textos {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+}*/
+.sectionText {
+  text-align: justify;
+  padding: 1rem;
+  padding: 4%;
+  width: 100%;
+}
+
+form {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5%;
+  font-weight: bold;
+  color: #080000;
+}
+
+.mb-3 {
+  width: 60%;
+}
+
+.btn {
+  margin: 2rem auto;
+  width: 20%;
+  background-color: #72285c;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: large;
+}
+
+input,
+textarea {
+  background-color: white(238, 238, 245, 0.432);
+  color: #1a1616;
+}
+
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: formulario;
+}
+
+.nombre {
+  font-size: larger;
+}
+
+.email {
+  font-size: larger;
+}
+
+.telefono {
+  font-size: larger;
+}
+
+.mensaje {
+  font-size: larger;
+}
+
+label {
+  font-size: larger;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    -ms-grid-columns: repeat 4, 1fr;
+        grid-template-columns: repeat 4, 1fr;
+    -ms-grid-rows: 5, 1fr;
+        grid-template-rows: 5, 1fr;
+        grid-template-areas: "headerHome headerHome headerHome headerHome" "destacados destacados destacados destacados" "card1 card1 card2 card2" "card3 card3 card4 card4" "pie pie pie pie";
+  }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+  .sectionText {
+    font-size: 0.8rem;
+  }
+  .contenedor-productos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat 4, 1fr;
+        grid-template-columns: repeat 4, 1fr;
+    -ms-grid-rows: 5, 1fr;
+        grid-template-rows: 5, 1fr;
+        grid-template-areas: "header header header header" "titulo titulo titulo titulo" "card1 card1 card2 card2" "card3 card3 card4 card4" "pie pie pie pie";
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contenedor {
+    -ms-grid-columns: repeat 4, 1fr;
+        grid-template-columns: repeat 4, 1fr;
+    -ms-grid-rows: 7, 1fr;
+        grid-template-rows: 7, 1fr;
+        grid-template-areas: "headerHome headerHome headerHome headerHome" "destacados destacados destacados destacados" "card1 card1 card1 card1" "card2 card2 card2 card2" "card3 card3 card3 card3" "card4 card4 card4 card4" "pie pie pie pie";
+  }
+  .card1 img,
+  .card2 img,
+  .card3 img,
+  .card4 img {
+    width: 80%;
+    margin-left: 5rem;
+  }
+  .contenedor-productos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat 4, 1fr;
+        grid-template-columns: repeat 4, 1fr;
+    -ms-grid-rows: 7 1fr;
+        grid-template-rows: 7 1fr;
+        grid-template-areas: "header header header header" "titulo titulo titulo titulo" "card1 card1 card1 card1" "card2 card2 card2 card2" "card3 card3 card3 card3" "card4 card4 card4 card4" "pie pie pie pie";
+  }
+}
+/*# sourceMappingURL=style.css.map */

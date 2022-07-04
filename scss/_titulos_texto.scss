@@ -1,0 +1,50 @@
+.titulo {
+    grid-area: titulo;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 3%;
+  }
+  
+  h2{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: x-large;
+  }
+  
+  .destacados {
+    display: flex;
+    grid-area: destacados;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 3%;
+  }
+  
+  .sectionText {
+    text-align: justify;
+    padding: 4%;
+    width: 100%;
+    font-size: x-large;
+    grid-area: sectionText;
+  }
+  
+  .sectionForm{
+    grid-area: sectionForm;
+    text-align:justify;
+    padding: 4%;
+    width: 100%;
+    font-size: x-large;
+  }
+  
+  .info {
+    text-align: justify;
+    padding: 10%;
+    font-size: x-large;  
+
+  }
+  
+  
+  

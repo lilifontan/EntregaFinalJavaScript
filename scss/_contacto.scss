@@ -1,0 +1,35 @@
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right:15%;
+  padding-left: 4%;
+  color: rgb(8, 0, 0);
+  .btn {
+    margin: 2rem auto;
+    background-color: rgb(114, 40, 92);
+    border: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: large;
+  }
+  input,
+  textarea {
+    background-color: white(238, 238, 245, 0.432);
+    color: rgb(26, 22, 22);
+  }
+  .nombre, .email, .telefono, .mensaje, label {
+    font-size: larger;
+  }
+  label {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+}
+.formulario{
+  grid-area: formulario;
+  width:100%;
+}

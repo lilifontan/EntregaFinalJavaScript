@@ -25,8 +25,21 @@ botonDelete.addEventListener('click', eliminarProducto)
 //window.location.href = "../pages/carrito.html"
 }
 
-/*if (localStorage.getItem('carrito')){
-    carrito = JSON.parse(localStorage.getItem('carrito'))
-    renderizarCarrito()
-}*/
+
+const eliminarProducto = (e) => {
+    //console.log("lega a eliminar producto")
+    const productoBorrado = e.target.getAttribute('data-id')
+    const producto = carrito.find((producto) => producto.id == productoBorrado)
+
+    if (producto.cantidad>1){
+    console.log("mayor a 1")
+    producto.cantidad= producto.cantidad-1}
+    
+    else{
+    carrito = carrito.filter((producto) => producto.id !=productoBorrado)}
+
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+    renderizarCarrito()  
+    
+}
 renderizarCarrito()

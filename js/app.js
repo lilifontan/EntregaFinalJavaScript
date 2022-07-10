@@ -4,6 +4,8 @@
 //DECLARACIONES------------------------------------------------------------------------------------------------------------
 let  productos = []
 let carrito = []
+carrito= JSON.parse(localStorage.getItem("carrito")) || [];
+console.log (carrito)
 
 //QUERY DE ELEMENTOS-------------------------------------------------------------------------------------------------------
 let verCarrito = document.querySelector('.verCarrito')
@@ -32,7 +34,7 @@ botonCompra.addEventListener('click', agregarProducto)
 })
 }
 
-    renderizarCarrito = (e) => {
+   /* renderizarCarrito = (e) => {
     ID_cartContainer.innerHTML= ''
     carrito.forEach((producto) => {
    // producto.cantidad = producto.cantidad +1
@@ -54,43 +56,40 @@ botonDelete.addEventListener('click', eliminarProducto)
  
 })
 window.location.href = "./pages/carrito.html"
-}
+}*/
 
 //Función que agrega productos al carrito
 function agregarProducto(e) {
     const productoElegido = e.target.getAttribute('data-id')
     const producto = productos.find((producto) => producto.id == productoElegido)
-    if (carrito.find((producto) => producto.id == productoElegido))
-    producto.cantidad= producto.cantidad+1
-    else{
-    producto.cantidad=1
-    carrito.push(producto)
-    localStorage.setItem('carrito',JSON.stringify(carrito))}
-    verCarrito.hidden= false
-    renderizarCarrito()
+
+    if (carrito.some((producto) => producto.id === productoElegido))  {
+        carrito = carrito.map((producto) => {
+            let cantidad = producto.cantidad
+            if (producto.id === productoElegido) cantidad++
+
+        return {
+            ...producto,
+            cantidad,
+        }
+       
+    })
+} else {
+    carrito.push({
+        ...producto,
+        cantidad: 1,
+    })
+
 }
-
-const eliminarProducto = (e) => {
-    //console.log("lega a eliminar producto")
-    const productoBorrado = e.target.getAttribute('data-id')
-    const producto = productos.find((producto) => producto.id == productoBorrado)
-
-    if (producto.cantidad>1){
-    console.log("mayor a 1")
-    producto.cantidad= producto.cantidad-1}
-    
-    else{
-    carrito = carrito.filter((producto) => producto.id !=productoBorrado)}
-
     localStorage.setItem('carrito',JSON.stringify(carrito))
-    renderizarCarrito()  
-    if (carrito.length == 0) {
-        verCarrito.hidden= true
-    } 
+    console.log (carrito)
+    Swal.fire('Producto agregado')
+
 }
+
+
 
 //EVENTLISTENERS-------------------------------------------------------------------------------------------------------------
-verCarrito.hidden=true
 
 
 //FETCH GET RELATIVO
@@ -101,11 +100,3 @@ fetch('./json/data.json')
         renderizarProducto(productos)
     }
     )
-
-
-//botonCarrito.addEventListener('click', renderizarCarrito)
-
-/*if (localStorage.getItem('carrito')){
-    carrito = JSON.parse(localStorage.getItem('carrito'))
-    renderizarCarrito()
-}*/

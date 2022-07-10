@@ -1,5 +1,6 @@
 
 carrito= JSON.parse(localStorage.getItem("carrito")) || [];
+console.log (carrito)
 
 renderizarCarrito = (e) => {
     ID_cartContainer.innerHTML= ''
@@ -27,12 +28,11 @@ botonDelete.addEventListener('click', eliminarProducto)
 
 
 const eliminarProducto = (e) => {
-    //console.log("lega a eliminar producto")
+    Swal.fire('Producto eliminado')
     const productoBorrado = e.target.getAttribute('data-id')
     const producto = carrito.find((producto) => producto.id == productoBorrado)
 
     if (producto.cantidad>1){
-    console.log("mayor a 1")
     producto.cantidad= producto.cantidad-1}
     
     else{

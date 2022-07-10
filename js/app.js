@@ -53,7 +53,7 @@ botonesDelete.forEach((botonDelete) => {
 botonDelete.addEventListener('click', eliminarProducto)
  
 })
-window.location.href = "../pages/carrito.html"
+window.location.href = "./pages/carrito.html"
 }
 
 //Función que agrega productos al carrito

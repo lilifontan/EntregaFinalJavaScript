@@ -1,5 +1,5 @@
 
-let carrito = []
+carrito= JSON.parse(localStorage.getItem("carrito")) || [];
 
 renderizarCarrito = (e) => {
     ID_cartContainer.innerHTML= ''
@@ -25,7 +25,8 @@ botonDelete.addEventListener('click', eliminarProducto)
 //window.location.href = "../pages/carrito.html"
 }
 
-if (localStorage.getItem('carrito')){
+/*if (localStorage.getItem('carrito')){
     carrito = JSON.parse(localStorage.getItem('carrito'))
     renderizarCarrito()
-}
+}*/
+renderizarCarrito()

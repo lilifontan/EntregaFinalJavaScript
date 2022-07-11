@@ -44,7 +44,7 @@ actualizarContador = () => {
     total.className = 'total'
     if (contador >0) {
     total.innerHTML = `
-    <h2>Valor total de su compra: ${contador}</h2></div>
+    <h2>Valor total de su compra: $${contador}</h2></div>
     <button class="buttonDeleteAll"> Vaciar Carrito </button>
         `
     ID_cartPrice.append(total)

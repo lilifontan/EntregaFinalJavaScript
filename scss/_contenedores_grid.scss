@@ -3,6 +3,7 @@
   /*clase agregada para armado de grid Home*/
   .contenedor {
     display: grid;
+   // @include backgrounds($color4);
     grid-template-columns: repeat (4, 1fr);
     grid-template-rows: (8, 1fr);
     grid-template-areas:

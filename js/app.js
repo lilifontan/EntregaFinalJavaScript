@@ -19,7 +19,7 @@ renderizarProducto = () => {
     card.innerHTML = `
     <div class="cartImg scale"> <img src="${imgSrc}" /> </div>
     <div class="cartTitle"><h2>${nombre}</h2></div>
-    <div class="cartPrice"><h2>${precio}</h2></div>
+    <div class="cartPrice"><h2>$${precio}</h2></div>
     <button data-id="${id}" class="buttonProd"> Agregar al Carrito </button>
         `
     ID_cardContainer.append(card)

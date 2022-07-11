@@ -1,7 +1,5 @@
 
 carrito= JSON.parse(localStorage.getItem("carrito")) || [];
-console.log (carrito)
-
 renderizarCarrito = (e) => {
     ID_cartContainer.innerHTML= ''
     carrito.forEach((producto) => {
@@ -41,7 +39,6 @@ actualizarContador = () => {
     carrito.forEach((producto) => {
         contador = contador + producto.precio*producto.cantidad
     })
-    console.log (contador)
     ID_cartPrice.innerHTML= ''
     const total = document.createElement('div')
     total.className = 'total'

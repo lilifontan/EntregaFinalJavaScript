@@ -3,7 +3,6 @@
 let  productos = []
 let carrito = []
 carrito= JSON.parse(localStorage.getItem("carrito")) || [];
-console.log (carrito)
 
 //QUERY DE ELEMENTOS-------------------------------------------------------------------------------------------------------
 let verCarrito = document.querySelector('.verCarrito')
@@ -28,7 +27,6 @@ renderizarProducto = () => {
 const botonesCompra = document.querySelectorAll('.buttonProd')  
 botonesCompra.forEach((botonCompra) => {
 botonCompra.addEventListener('click', agregarProducto)
-  
 })
 }
 
@@ -55,7 +53,6 @@ function agregarProducto(e) {
 
 }
     localStorage.setItem('carrito',JSON.stringify(carrito))
-    console.log (carrito)
     Swal.fire('Producto agregado')
 
 }

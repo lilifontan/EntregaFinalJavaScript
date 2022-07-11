@@ -1,6 +1,4 @@
 
-
-
 //DECLARACIONES------------------------------------------------------------------------------------------------------------
 let  productos = []
 let carrito = []
@@ -34,30 +32,6 @@ botonCompra.addEventListener('click', agregarProducto)
 })
 }
 
-   /* renderizarCarrito = (e) => {
-    ID_cartContainer.innerHTML= ''
-    carrito.forEach((producto) => {
-   // producto.cantidad = producto.cantidad +1
-    //producto.cantidad=producto.cantidad+1
-    const {id, nombre, imgSrc, precio, cantidad} = producto   
-    const card = document.createElement('div')
-    card.className = 'card'
-    card.innerHTML = `
-    <div class="cartImg scale"> <img src="${imgSrc}" /> </div>
-    <div class="cartTitle"><h2>${nombre}</h2></div>
-    <div class="cartCant"><h2>cantidad: ${cantidad}</h2></div>
-    <button data-id="${id}" class="buttonDelete"> Eliminar del Carrito </button>
-        `
-    ID_cartContainer.append(card)
-})
-const botonesDelete = document.querySelectorAll('.buttonDelete')  
-botonesDelete.forEach((botonDelete) => {
-botonDelete.addEventListener('click', eliminarProducto)
- 
-})
-window.location.href = "./pages/carrito.html"
-}*/
-
 //Función que agrega productos al carrito
 function agregarProducto(e) {
     const productoElegido = e.target.getAttribute('data-id')
@@ -72,7 +46,6 @@ function agregarProducto(e) {
             ...producto,
             cantidad,
         }
-       
     })
 } else {
     carrito.push({
@@ -86,11 +59,6 @@ function agregarProducto(e) {
     Swal.fire('Producto agregado')
 
 }
-
-
-
-//EVENTLISTENERS-------------------------------------------------------------------------------------------------------------
-
 
 //FETCH GET RELATIVO
 fetch('./json/data.json')

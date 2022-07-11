@@ -5,8 +5,6 @@ console.log (carrito)
 renderizarCarrito = (e) => {
     ID_cartContainer.innerHTML= ''
     carrito.forEach((producto) => {
-   // producto.cantidad = producto.cantidad +1
-    //producto.cantidad=producto.cantidad+1
     const {id, nombre, imgSrc, precio, cantidad} = producto   
     const card = document.createElement('div')
     card.className = 'card'
@@ -26,7 +24,6 @@ botonDelete.addEventListener('click', eliminarProducto)
 actualizarContador()
 }
 
-
 const eliminarProducto = (e) => {
     Swal.fire('Producto eliminado')
     const productoBorrado = e.target.getAttribute('data-id')
@@ -37,7 +34,6 @@ const eliminarProducto = (e) => {
     carrito = carrito.filter((producto) => producto.id !=productoBorrado)}
     localStorage.setItem('carrito',JSON.stringify(carrito))
     renderizarCarrito()  
-    
 }
 
 actualizarContador = () => {
@@ -47,15 +43,28 @@ actualizarContador = () => {
     })
     console.log (contador)
     ID_cartPrice.innerHTML= ''
-
- 
     const total = document.createElement('div')
     total.className = 'total'
+    if (contador >0) {
     total.innerHTML = `
     <h2>Valor total de su compra: ${contador}</h2></div>
+    <button class="buttonDeleteAll"> Vaciar Carrito </button>
         `
     ID_cartPrice.append(total)
-   // <button data-id="${id}" class="buttonDelete"> Eliminar del Carrito </button>
+    const botonDeleteAll = document.querySelector('.buttonDeleteAll')  
+    botonDeleteAll.addEventListener('click', vaciarCarrito)
+    }  else
+    total.innerHTML = `
+    <h2>El carrito está vacío</h2></div>
+        `
+    ID_cartPrice.append(total)
+    const botonDeleteAll = document.querySelector('.buttonDeleteAll')  
+    botonDeleteAll.addEventListener('click', vaciarCarrito)
+}
+const vaciarCarrito = (e) => {
+    carrito=[]
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+    renderizarCarrito()  
 }
 
 

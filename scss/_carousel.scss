@@ -11,10 +11,11 @@ grid-area: contenedor_carousel;
 
   .cartPrice{
     display: flex;
+    flex-direction: row;
     grid-area: lala;
-    justify-content: space-around;
-    flex-flow: row wrap;
     width: 100%;
+    justify-content: space-around;
+
   }
 
  .cartContainer

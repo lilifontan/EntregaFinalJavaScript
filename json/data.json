@@ -1,16 +1,16 @@
 
 
 [
-{"id": "001", "nombre": "Ethereal", "imgSrc": "public/Imagenes/Ring_resized.jpg", "precio": 12500, "cantidad" : 0},
-{"id": "002", "nombre": "Avar", "imgSrc": "public/Imagenes/Earrings_resized.jpeg", "precio": 15900, "cantidad" : 0},
-{"id": "003", "nombre": "Cyon", "imgSrc": "public/Imagenes/Necklace_resized.jpeg", "precio": 16500, "cantidad" : 0},
+{"id": "001", "nombre": "Ethereal", "imgSrc": "./public/Imagenes/Ring_resized.jpg", "precio": 12500, "cantidad" : 0},
+{"id": "002", "nombre": "Avar", "imgSrc": "./public/Imagenes/Earrings_resized.jpeg", "precio": 15900, "cantidad" : 0},
+{"id": "003", "nombre": "Cyon", "imgSrc": "./public/Imagenes/Necklace_resized.jpeg", "precio": 16500, "cantidad" : 0},
 {"id": "004", "nombre": "Balter", "imgSrc": "public/Imagenes/Ring_resized.jpg", "precio": 24500, "cantidad" : 0},
 {"id": "005", "nombre": "Aegon", "imgSrc": "./public/Imagenes/Aegonate.jpg", "precio": 17900, "cantidad" : 0},
 {"id": "006", "nombre": "Enif", "imgSrc": "./public/Imagenes/Enatrane_resized.jpeg", "precio": 15900, "cantidad" : 0},
 {"id": "007", "nombre": "Gehry", "imgSrc": "./public/Imagenes/Gehryman_resized.jpeg", "precio": 46500, "cantidad" : 0},
 {"id": "008", "nombre": "Kraken", "imgSrc": "./public/Imagenes/Krakense_resized.jpg", "precio": 14500, "cantidad" : 0},
-{"id": "009", "nombre": "Nycto", "imgSrc": "../public/Imagenes/Nyctorea_resized.jpg", "precio": 34900, "cantidad" : 0},
-{"id": "010", "nombre": "Odile", "imgSrc": "../public/Imagenes/Odelelet_resized.jpeg", "precio": 28900, "cantidad" : 0},
-{"id": "011", "nombre": "Strass", "imgSrc": "../public/Imagenes/Strassed_resized.jpg", "precio": 14900, "cantidad" : 0},
-{"id": "012", "nombre": "Abscond", "imgSrc": "../public/Imagenes/Absconda_resized.jpeg", "precio": 18000, "cantidad" : 0}
+{"id": "009", "nombre": "Nycto", "imgSrc": "./public/Imagenes/Nyctorea_resized.jpg", "precio": 34900, "cantidad" : 0},
+{"id": "010", "nombre": "Odile", "imgSrc": "./public/Imagenes/Odelelet_resized.jpeg", "precio": 28900, "cantidad" : 0},
+{"id": "011", "nombre": "Strass", "imgSrc": "./public/Imagenes/Strassed_resized.jpg", "precio": 14900, "cantidad" : 0},
+{"id": "012", "nombre": "Abscond", "imgSrc": "./public/Imagenes/Absconda_resized.jpeg", "precio": 18000, "cantidad" : 0}
 ]

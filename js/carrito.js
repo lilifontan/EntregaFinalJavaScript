@@ -23,7 +23,7 @@ botonesDelete.forEach((botonDelete) => {
 botonDelete.addEventListener('click', eliminarProducto)
  
 })
-//window.location.href = "../pages/carrito.html"
+actualizarContador()
 }
 
 
@@ -31,15 +31,32 @@ const eliminarProducto = (e) => {
     Swal.fire('Producto eliminado')
     const productoBorrado = e.target.getAttribute('data-id')
     const producto = carrito.find((producto) => producto.id == productoBorrado)
-
     if (producto.cantidad>1){
     producto.cantidad= producto.cantidad-1}
-    
     else{
     carrito = carrito.filter((producto) => producto.id !=productoBorrado)}
-
     localStorage.setItem('carrito',JSON.stringify(carrito))
     renderizarCarrito()  
     
 }
+
+actualizarContador = () => {
+    let contador =0
+    carrito.forEach((producto) => {
+        contador = contador + producto.precio*producto.cantidad
+    })
+    console.log (contador)
+    ID_cartPrice.innerHTML= ''
+
+ 
+    const total = document.createElement('div')
+    total.className = 'total'
+    total.innerHTML = `
+    <h2>Valor total de su compra: ${contador}</h2></div>
+        `
+    ID_cartPrice.append(total)
+   // <button data-id="${id}" class="buttonDelete"> Eliminar del Carrito </button>
+}
+
+
 renderizarCarrito()

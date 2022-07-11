@@ -9,6 +9,14 @@ grid-area: contenedor_carousel;
     width: 100%;
   }
 
+  .cartPrice{
+    display: flex;
+    grid-area: lala;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
  .cartContainer
  {
   display: flex;

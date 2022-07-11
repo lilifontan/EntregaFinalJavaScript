@@ -85,8 +85,8 @@ ul li a:hover {
   display: grid;
   background-color: #e0d2d4;
   grid-template-columns: repeat 4, 1fr;
-  grid-template-rows: 4, 1fr;
-  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "lolo lolo lolo lolo" "pie pie pie pie"; }
+  grid-template-rows: 5, 1fr;
+  grid-template-areas: "header header header header" "destacados destacados destacados destacados" "lolo lolo lolo lolo" "lala lala lala lala" "pie pie pie pie"; }
 
 /*clase agregada para armado de grid Form de Contacto*/
 .contenedor-form {
@@ -251,7 +251,7 @@ form {
   background-color: #e0d2d4;
   grid-template-columns: repeat 4, 1fr;
   grid-template-rows: 5, 1fr;
-  grid-template-areas: "header header " "destacados destacados" "lolo lolo" "pie pie"; }
+  grid-template-areas: "header header " "destacados destacados" "lolo lolo" "lala lala" "pie pie"; }
 
 @media screen and (max-width: 414px) {
   .contenedor {
@@ -275,7 +275,7 @@ form {
     background-color: #e0d2d4;
     grid-template-columns: repeat 4, 1fr;
     grid-template-rows: 5, 1fr;
-    grid-template-areas: "header" "destacados" "lolo" "pie"; }
+    grid-template-areas: "header" "destacados" "lolo" "lala" "pie"; }
   header {
     background-color: black;
     grid-area: header;
@@ -358,6 +358,13 @@ h2 {
 .cardContainer {
   display: flex;
   grid-area: lili;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%; }
+
+.cartPrice {
+  display: flex;
+  grid-area: lala;
   justify-content: space-around;
   flex-flow: row wrap;
   width: 100%; }
